@@ -1,0 +1,144 @@
+/**
+* 2007-2015 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2015 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*/
+
+/**
+ * Don't forget to prefix your containers with your own identifier
+ * to avoid any conflicts with others containers.
+ */
+
+#content .tab-pane:first-child .panel {
+	border-top-left-radius: 0;
+}
+
+.alipay-header .text-branded,
+.alipay-content .text-branded {
+	color: #00aff0;
+}
+
+.alipay-header h4,
+.alipay-content h4,
+.alipay-content h5,
+h5.help {
+	margin: 2px 0;
+	color: #00aff0;
+	font-size: 1.8em;
+}
+
+h5.help { font-size: 16px; margin-bottom: 10px; }
+
+.alipay-header h4 {
+	margin-top: 5px;
+}
+
+.alipay-header .col-md-6 {
+	margin-top: 18px;
+}
+
+.alipay-content h4 {
+	margin-bottom: 10px;
+}
+
+.alipay-content h5 {
+	font-size: 1.4em;
+	margin-bottom: 15px;
+}
+
+.alipay-content h5.margin-top { padding-top: 50px; }
+.alipay-content h5.sandbox { padding-top: 30px; }
+
+.alipay-content h6 {
+	font-size: 1.3em;
+	margin: 1px 0 4px 0;
+}
+
+.alipay-header > .col-md-4 {
+	height: 65px;
+	vertical-align: middle;
+	border-left: 1px solid #ddd;
+}
+
+.alipay-header > .col-md-4:first-child {
+	border-left: none;
+}
+
+.alipay-header #create-account-btn {
+	margin-top: 14px;
+}
+
+.alipay-content dd + dt {
+	margin-top: 5px;
+}
+
+.alipay-content ul {
+	padding-left: 15px;
+}
+
+.alipay-content .ul-spaced li {
+	margin-bottom: 5px;
+}
+
+.alipay-content p.justify,
+.alipay-content dd.justify {
+    text-align: justify;
+}
+
+.alipay-content div.row.spaces {
+    padding-top: 35px;
+}
+
+.alipay-content img.pictos {
+    padding-top: 25px;
+    margin-bottom: 15px;
+}
+
+.alipay-content dl dd {
+    background: url(../img/bullet_point.png) top left no-repeat;
+    padding: 0px 10px 15px 20px;
+    margin-left: 10px;
+    background-position: 0px 5px;
+}
+
+.alipay-content .payment-method { float: right; padding-top: 25px }
+.alipay-content p.padding-left { padding-left: 30px; }
+.alipay-content a.alipay-website { margin: 15px 0px; display: inline-block }
+.alipay-content .row.padding-top { padding-top: 40px }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

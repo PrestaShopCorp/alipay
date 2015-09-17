@@ -1,0 +1,4 @@
+#alipay_payment_button a { padding: 0px 0px 0px 210px; }
+#alipay_payment_button span { display: block; padding-top: 5px }
+#alipay_payment_button span.label_en { padding-top: 30px; }
+#alipay_payment_button a:after { display: none }

@@ -1,0 +1,59 @@
+#content { width: 1230px; margin: 0 auto }
+.row { clear: both; margin-left: -5px; margin-right: -5px }
+.row:after { clear: both; content: " "; display: table}
+.alipay-content, .alipay-header { width: 1230px; margin: 0 auto }
+.col-md-1 { float: left; width: 100px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-2 { float: left; width: 200px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-3 { float: left; width: 295px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-4 { float: left; width: 400px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-5 { float: left; width: 295px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-6 { float: left; width: 595px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 20px; }
+.col-md-7 { float: left; width: 295px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-8 { float: left; width: 800px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-9 { float: left; width: 900px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-10{ float: left; width: 1000px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-11{ float: left; width: 1100px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-12{ float: left; width: 600px; position: relative; min-height: 1px; padding-left: 5px; padding-right: 5px; }
+.col-md-12.pictos { width: 100% }
+.defaultForm.col-lg-5, .defaultForm.col-lg-2 { float: left; padding-top: 20px; }
+.defaultForm.col-lg-5 { padding-right: 19px; }
+.btn-primary {
+    background-color: #00aff0;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 8px;
+    font-size: 12px;
+    line-height: 1.42857;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn.btn-primary:hover {
+    background-color: #008abd;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+}
+h1 { font-size: 28px!important; color: #999; text-align: center;}
+#active_on, #active_off { float: left; }
+.defaultForm.exchange-rate { padding-right: 0px; padding-top: 20px; width: 289px }
+.defaultForm.exchange-rate .margin-form { padding-left: 100px }
+
+.defaultForm .margin-form { padding-left: 570px }
+.defaultForm label { width: 535px }
+.defaultForm.col-lg-5 .margin-form { padding-left: 120px }
+.defaultForm.col-lg-5 label { width: 110px }
+form.defaultForm.col-lg-5 { width: 450px }
+label[for=active_on], label[for=active_off] { width: auto!important; padding: 0; margin-right: 5px  }
+
