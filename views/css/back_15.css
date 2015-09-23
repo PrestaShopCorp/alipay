@@ -48,12 +48,14 @@
 h1 { font-size: 28px!important; color: #999; text-align: center;}
 #active_on, #active_off { float: left; }
 .defaultForm.exchange-rate { padding-right: 0px; padding-top: 20px; width: 289px }
-.defaultForm.exchange-rate .margin-form { padding-left: 100px }
+.defaultForm.exchange-rate .margin-form { padding-left: 100px; width: 100px; }
 
-.defaultForm .margin-form { padding-left: 570px }
-.defaultForm label { width: 535px }
+.defaultForm .margin-form { padding-left: 280px; width: 280px; }
+.defaultForm label { width: 250px }
 .defaultForm.col-lg-5 .margin-form { padding-left: 120px }
 .defaultForm.col-lg-5 label { width: 110px }
+.defaultForm.col-lg-8 { width: 700px; float: left }
+.defaultForm.col-lg-4 { width: 510px; float: left; margin-left: 20px; }
 form.defaultForm.col-lg-5 { width: 450px }
 label[for=active_on], label[for=active_off] { width: auto!important; padding: 0; margin-right: 5px  }
-
+p.preference_description { width: 345px!important; }

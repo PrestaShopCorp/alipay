@@ -68,9 +68,6 @@ class AlipayBackEndForm extends Alipay
                         'type' => (_PS_VERSION_ < '1.6' ? 'radio':'switch'),
                         'label' => $this->l('Live mode'),
                         'name' => 'ALIPAY_LIVE_MODE',
-                        'hint' => '<strong>'.
-                            $this->l('To use the Test environment you must add a list of IP in your PC\'s localhost')
-                            .'</strong> '.$this->l('(please check the documentation).'),
                         'is_bool' => true,
                         'desc' => $this->l('Use this module in live mode'),
                         'values' => array(
@@ -281,11 +278,11 @@ class AlipayBackEndForm extends Alipay
      */
     public function getHelpForm()
     {
-        $img_link = Tools::getHttpHost(true).__PS_BASE_URI__.'modules/alipay/views/img/';
+        $img_link = Tools::getHttpHost(true).__PS_BASE_URI__.'modules/alipay/views/img/help/';
         return array(
             'form' => array(
                 'legend' => array(
-                    'title' => $this->l('How to make test payments?'),
+                    'title' => $this->l('How to make test payments on Front Office?'),
                     'icon' => 'icon-cogs',
                 ),
                 'input' => array(
@@ -296,10 +293,26 @@ class AlipayBackEndForm extends Alipay
                             '<h5 class="help">'.$this->l('Alipay front office sandbox account').'</h5>'
                             .'<p><strong>'.$this->l('Email: ').'</strong>sandbox_forex1@alipay.com<br />'
                             .'<strong>'.$this->l('Password: ').'</strong>111111</p>'
-                            .'<p>'.$this->l('See below a demonstration on how to use these login details:').'</p>'
-                            .'<p><a href="'.$img_link.'alipay_example1.jpg" target="_blank">'.$this->l('Example 1')
-                            .'</a> - <a target="_blank" href="'.$img_link.'alipay_example2.jpg">'.$this->l('Example 2')
-                            .'</a></p>',
+                            .'<p>'.$this->l('Click the images below to see step-by-step guide to run the testing mode')
+                            .'</p><br />'
+                            .'<p>
+                                <a href="'.$img_link.'help1.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb1.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help2.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb2.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help3.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb3.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help4.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb4.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help5.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb5.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help6.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb6.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help7.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb7.jpg" width="50" height="50" /></a>
+                                <a href="'.$img_link.'help8.jpg" target="_blank">
+                                <img class="help" src="'.$img_link.'thumb8.jpg" width="50" height="50" /></a>
+                            </p>',
                     ),
                 ),
             ),

@@ -52,9 +52,7 @@ class Alipay extends PaymentModule
         }
 
         $this->displayName = $this->l('Alipay');
-        $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS
-        IN CHINA. It processes 50% of the total online transactions and is the most preferred payment method by Chinese
-        consumers. Configure Alipay and start selling to China now.');
+        $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50 of the total online transactions and is the most prefered payment method by Chinese consumers. Configure Alipay and start selling to China now.');
 
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall Alipay?');
 
@@ -167,17 +165,19 @@ class Alipay extends PaymentModule
             .'&token='.Tools::getAdminTokenLite('AdminModules');
         $this->context->smarty->assign('module_dir', $this->_path);
         $this->context->smarty->assign('current_index', $current_index);
+        $this->context->smarty->assign('old_version', (_PS_VERSION_ < '1.6' ? '1':'0'));
 
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/backend.tpl');
         $back_end_form = new AlipayBackEndForm();
         $config_form = $back_end_form->renderConfigForm();
         $reconciliation_file_form = $back_end_form->renderReconciliationForm();
         $settlement_file_form = $back_end_form->renderSettlementForm();
-        $help_form = $back_end_form->renderHelpForm();
         if (_PS_VERSION_ < '1.6') {
             $exchange_form = $this->context->smarty->fetch($this->local_path.'views/templates/admin/exchange_rate.tpl');
+            $help_form = $this->context->smarty->fetch($this->local_path.'views/templates/admin/howto.tpl');
         } else {
             $exchange_form = $back_end_form->renderExchangeRateForm();
+            $help_form = $back_end_form->renderHelpForm();
         }
         return $this->confirmation_message.$output.$config_form.$help_form.$reconciliation_file_form
         .$settlement_file_form.$exchange_form;
@@ -204,7 +204,9 @@ class Alipay extends PaymentModule
         foreach ($form_values as $key => $value) {
             Configuration::updateValue($key, Tools::getValue($key));
         }
-        $this->confirmation_message = $this->displayConfirmation($this->l('Settings updated'));
+        $this->confirmation_message = (_PS_VERSION_ < '1.6' ?
+            '<div class="conf confirmation">'.$this->l('Settings updated').'</div>':
+            $this->displayConfirmation($this->l('Settings updated')));
     }
 
     /**

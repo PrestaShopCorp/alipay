@@ -34,7 +34,7 @@
 		</div>
 		<div class="col-xs-12 col-md-3 text-center">
 			<a href="http://global.alipay.com/product/websitepayment.html" class="btn btn-primary" id="create-account-btn" target="_blank">{l s='Create an account' mod='alipay'}</a><br />
-			{l s='Already have one?' mod='alipay'}<a href="http://global.alipay.com/product/websitepayment.html" target="_blank"> {l s='Log in' mod='alipay'}</a>
+			{l s='Already have one?' mod='alipay'}<a href="https://globalprod.alipay.com/login/global.htm" target="_blank"> {l s='Log in' mod='alipay'}</a>
 		</div>
 	</div>
 
@@ -60,13 +60,17 @@
                     <dd class="justify">{l s='Alipay offers reconciliation file and settlement file' mod='alipay'}</dd>
                     <dd class="justify">{l s='We support 15 foreign currencies (GBP, HKD, USD, SGD, JPY, CAD, AUD, EUR, NZD, KRW, THB, CHF, SEK, DKK, NOK)' mod='alipay'}</dd>
                 </dl>
-                <img src="{$module_dir|escape:'html':'UTF-8'}views/img/alipay_pictos.png" class="col-md-12 pictos" />
+                <img src="{$module_dir|escape:'html':'UTF-8'}views/img/alipay_pictos.png" class="pictos" />
 			</div>
 			
 			<div class="col-md-6">
                 <div class="video-container">
                     <iframe src="https://www.youtube-nocookie.com/embed/e3ejxKLY1I4" width="335" height="188" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
+            </div>
+		</div>
+        <div class="row">
+            <div class="{if $old_version != '1'}alert alert-info{/if} info">
                 <h5>{l s='How to configure your Alipay module?' mod='alipay'}</h5>
                 <p><strong>{l s='1. You do not have an Alipay Business Account:' mod='alipay'}</strong></p>
                 <p class="justify padding-left">
@@ -77,8 +81,8 @@
                     {l s='In the meanwhile, use the sandbox login below to see how Alipay would look like in your front office.' mod='alipay'}
                 </p>
                 <p><strong>{l s='2. You already have an Alipay Business Account:' mod='alipay'}</strong></p>
-                <p><a href="http://global.alipay.com/product/websitepayment.html" target="_blank">{l s='Sign in' mod='alipay'}</a> {l s='and follow the instructions.' mod='alipay'}</p>
+                <p><a href="https://globalprod.alipay.com/login/global.htm" target="_blank">{l s='Sign in' mod='alipay'}</a> {l s='and follow the instructions.' mod='alipay'}</p>
             </div>
-		</div>
+        </div>
 	</div>
 </div>
