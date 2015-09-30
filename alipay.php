@@ -203,7 +203,7 @@ Chinese consumers. Configure Alipay and start selling to China now.');
     protected function postProcess()
     {
         $form_values = $this->getConfigFormValues();
-        foreach ($form_values as $key => $value) {
+        foreach (array_keys($form_values) as $key) {
             Configuration::updateValue($key, Tools::getValue($key));
         }
         $this->confirmation_message = (_PS_VERSION_ < '1.6' ?
