@@ -36,7 +36,7 @@ function check_order()
 		data:'id_cart={$id_cart|intval}&id_module={$id_module|intval}&key={$secure_key|escape}',
 		success:function (r) {ldelim}
 			if (r == 'ok')
-                window.location.href = '{$link->getPageLink("order-confirmation", null, null, "&id_cart={$id_cart|escape:'htmlall':'UTF-8'}&id_module={$id_module|escape:'htmlall':'UTF-8'}&key={$secure_key|escape:'htmlall':'UTF-8'}")}';
+                window.location.href = '{$link->getPageLink("order-confirmation")|escape:'htmlall':'UTF-8'}'+"&id_cart={$id_cart|escape:'htmlall':'UTF-8'}&id_module={$id_module|escape:'htmlall':'UTF-8'}&key={$secure_key|escape:'htmlall':'UTF-8'}";
 
             {rdelim}
 	{rdelim});

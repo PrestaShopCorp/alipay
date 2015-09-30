@@ -25,7 +25,6 @@ $_MODULE['<{alipay}default-bootstrap>alipaybackendform_3e948df59db3b59a6aa90d8b9
 $_MODULE['<{alipay}default-bootstrap>alipaybackendform_f2d0e7946bfaabc500f4e64ff2163107'] = 'Password:';
 $_MODULE['<{alipay}default-bootstrap>alipaybackendform_922eb6f5bcffa824f8fd67a7d8dc2ac6'] = 'Click the images below to see step-by-step guide to run the testing mode:';
 $_MODULE['<{alipay}default-bootstrap>alipay_92a176f8a430b8b977ffe5fcff601372'] = 'Alipay';
-$_MODULE['<{alipay}default-bootstrap>alipay_46f9f2c77b59290440f2134772589f8a'] = 'ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50% of the total online transactions and is the most preferred payment method by Chinese consumers. Configure Alipay and start selling to China now.';
 $_MODULE['<{alipay}default-bootstrap>alipay_8b2435af46dcbcdc6c3458b03d3b4f0e'] = 'Are you sure you want to uninstall Alipay?';
 $_MODULE['<{alipay}default-bootstrap>alipay_92d4773a9f32fc3333cb8238471cf763'] = 'You have to enable the cURL extension on your server to install this module';
 $_MODULE['<{alipay}default-bootstrap>alipay_c888438d14855d7d96a2724ee9c306bd'] = 'Settings updated';

@@ -24,8 +24,6 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
-include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
-
 class Alipay extends PaymentModule
 {
     /**
@@ -52,7 +50,9 @@ class Alipay extends PaymentModule
         }
 
         $this->displayName = $this->l('Alipay');
-        $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50 of the total online transactions and is the most prefered payment method by Chinese consumers. Configure Alipay and start selling to China now.');
+        $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS
+IN CHINA. It processes 50 of the total online transactions and is the most prefered payment method by
+Chinese consumers. Configure Alipay and start selling to China now.');
 
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall Alipay?');
 
@@ -86,6 +86,8 @@ class Alipay extends PaymentModule
      */
     public function install()
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         if (extension_loaded('curl') == false) {
             $this->_errors[] = $this->l('You have to enable the cURL extension on your server to install this module');
             return false;
@@ -241,6 +243,8 @@ class Alipay extends PaymentModule
      */
     public function hookPayment($params)
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         $currency_id = $params['cart']->id_currency;
         $currency = new Currency((int)$currency_id);
         $cart = new Cart($params['cart']->id);
@@ -283,6 +287,8 @@ class Alipay extends PaymentModule
      */
     public function hookPaymentReturn($params)
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         if ($this->active == false) {
             return;
         }
@@ -311,6 +317,8 @@ class Alipay extends PaymentModule
 
     public function hookDisplayAdminOrderLeft($params)
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         $transaction_details = $this->getTransactionDetails($params['id_order']);
         if (!$transaction_details || empty($transaction_details)) {
             return false;
@@ -412,6 +420,8 @@ class Alipay extends PaymentModule
      */
     public function postProcessRefund($id_order, $transaction_details)
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         $service = Configuration::get('ALIPAY_SERVICE_REFUND');
         $credentials = AlipayTools::getCredentials($service, false);
         $gmt_date = date('Ymdhis');
@@ -480,6 +490,8 @@ class Alipay extends PaymentModule
      */
     public function postProcessExchangeRate()
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         $service = Configuration::get('ALIPAY_SERVICE_EXCHANGE_RATE');
         $credentials = AlipayTools::getCredentials($service, false);
         $alipayapi = new AlipayApi($credentials);
@@ -494,6 +506,8 @@ class Alipay extends PaymentModule
      */
     public function postProcessReconciliation()
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         $service = Configuration::get('ALIPAY_SERVICE_COMPARE_FILE');
         $credentials = AlipayTools::getCredentials($service, false);
         $alipayapi = new AlipayApi($credentials);
@@ -517,6 +531,8 @@ class Alipay extends PaymentModule
      */
     public function postProcessSettlementFile()
     {
+        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+
         $service = Configuration::get('ALIPAY_SERVICE_LIQUIDATION_FILE');
         $credentials = AlipayTools::getCredentials($service, false);
         $alipayapi = new AlipayApi($credentials);
