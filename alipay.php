@@ -50,9 +50,7 @@ class Alipay extends PaymentModule
         }
 
         $this->displayName = $this->l('Alipay');
-        $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS
-IN CHINA. It processes 50 of the total online transactions and is the most prefered payment method by
-Chinese consumers. Configure Alipay and start selling to China now.');
+        $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50% of the total online transactions and is the most preferred payment method by Chinese consumers. Configure Alipay and start selling to China now.');
 
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall Alipay?');
 
