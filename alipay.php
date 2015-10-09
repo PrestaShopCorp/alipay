@@ -45,10 +45,6 @@ class Alipay extends PaymentModule
 
         parent::__construct();
 
-        if (_PS_VERSION_ < '1.5') {
-            require(_PS_MODULE_DIR_.$this->name.'/backward_compatibility/backward.php');
-        }
-
         $this->displayName = $this->l('Alipay');
         $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50% of the total online transactions and is the most preferred payment method by Chinese consumers. Configure Alipay and start selling to China now.');
 
