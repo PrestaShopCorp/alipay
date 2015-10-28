@@ -462,7 +462,7 @@ class Alipay extends PaymentModule
         $sql = new DbQuery();
         $sql->select('a.*');
         $sql->from('alipay', 'a');
-        $sql->where('a.id_order = '.$id_order);
+        $sql->where('a.id_order = '.(int)$id_order);
         return Db::getInstance()->getRow($sql);
     }
 
@@ -477,7 +477,7 @@ class Alipay extends PaymentModule
         $sql = new DbQuery();
         $sql->select('ar.*');
         $sql->from('alipay_refund', 'ar');
-        $sql->where('ar.id_order = '.$id_order);
+        $sql->where('ar.id_order = '.(int)$id_order);
         return Db::getInstance()->executeS($sql);
     }
 

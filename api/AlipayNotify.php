@@ -144,7 +144,7 @@ class AlipayNotify extends Request
         $sql = new DbQueryCore();
         $sql->select('an.notify_id, an.sign');
         $sql->from('alipay_notification', 'an');
-        $sql->where('an.notify_id="'.$this->notify_id.'" AND an.sign="'.$this->sign.'"');
+        $sql->where('an.notify_id="'.pSQL($this->notify_id).'" AND an.sign="'.pSQL($this->sign).'"');
         $result = Db::getInstance()->getRow($sql);
         if ($result) {
             return false;
