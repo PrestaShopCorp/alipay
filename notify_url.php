@@ -52,10 +52,15 @@ switch ($alipay_notify->getNotifyType()) {
         $alipayapi->prepareRequest($alipay_notify, false);
         $url = $alipayapi->createUrl();
         $alipay_notify->setParamList('compare_sign');
+        $params = $alipayapi->getProtocolParams();
+        unset($params['partner']);
+        unset($params['service']);
+        $alipayapi->setProtocolParams($params);
+        $alipayapi->setSecreteKey(Configuration::get('ALIPAY_SECRETE_KEY'));
         $alipayapi->prepareRequest($alipay_notify);
         if ($alipayapi->getResponse($url) != 'true' ||
             !$alipay_notify->verifyDupplicates() ||
-            $alipay_notify->getSign() != Tools::getValue('sign')
+            $alipayapi->getSign() != Tools::getValue('sign')
         ) {
             return;
         }
