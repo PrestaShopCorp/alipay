@@ -54,11 +54,13 @@ class AlipayConfirmationModuleFrontController extends ModuleFrontController
                 }
             }
             if ($payment_response->getIdOrder()) {
-                $s = 'index.php?controller=order-confirmation';
-                $s .= '&id_cart='.$payment_response->getIdCart();
-                $s .= '&id_module='.$payment_response->getIdModule();
-                $s .= '&id_order='.$payment_response->getIdOrder();
-                $s .= '&key='.$payment_response->getSecureKey();
+                $params = array(
+                    'id_cart' => $payment_response->getIdCart(),
+                    'id_module' => $payment_response->getIdModule(),
+                    'id_order' => $payment_response->getIdOrder(),
+                    'key' => $payment_response->getSecureKey(),
+                );
+                $s = $this->context->link->getModuleLink('alipay', 'confirmation', $params);
                 Tools::redirect($s);
             } else {
                 $this->context->smarty->assign($payment_response->getTplVars());
