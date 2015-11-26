@@ -2,7 +2,7 @@
 <module>
 	<name>alipay</name>
 	<displayName><![CDATA[Alipay]]></displayName>
-	<version><![CDATA[1.0.1]]></version>
+	<version><![CDATA[1.0.2]]></version>
 	<description><![CDATA[ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50% of the total online transactions and is the most preferred payment method by Chinese consumers. Configure Alipay and start selling to China now.]]></description>
 	<author><![CDATA[Alipay]]></author>
 	<tab><![CDATA[payments_gateways]]></tab>

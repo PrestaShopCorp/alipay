@@ -33,8 +33,8 @@
             </h1>
 		</div>
 		<div class="col-xs-12 col-md-3 text-center">
-			<a href="http://global.alipay.com/product/websitepayment.html" class="btn btn-primary" id="create-account-btn" target="_blank">{l s='Create an account' mod='alipay'}</a><br />
-			{l s='Already have one?' mod='alipay'}<a href="https://globalprod.alipay.com/login/global.htm" target="_blank"> {l s='Log in' mod='alipay'}</a>
+			<a href="http://global.alipay.com/product/websitepayment.html?from=prestashop" class="btn btn-primary" id="create-account-btn" target="_blank">{l s='Create an account' mod='alipay'}</a><br />
+			{l s='Already have one?' mod='alipay'}<a href="https://globalprod.alipay.com/login/global.htm?from=prestashop" target="_blank"> {l s='Log in' mod='alipay'}</a>
 		</div>
 	</div>
 
@@ -75,13 +75,13 @@
                 <p><strong>{l s='1. You do not have an Alipay Business Account:' mod='alipay'}</strong></p>
                 <p class="justify padding-left">
                     {l s='Visit' mod='alipay'}<br />
-                    <a class="alipay-website" href="http://global.alipay.com/product/websitepayment.html" target="_blank">http://global.alipay.com/product/websitepayment.html</a><br />
+                    <a class="alipay-website" href="http://global.alipay.com/product/websitepayment.html?from=prestashop" target="_blank">http://global.alipay.com/product/websitepayment.html?from=prestashop</a><br />
                     {l s='to apply for an Alipay Business Account.' mod='alipay'}<br />
                     {l s='We will email you the login details in 2 days.' mod='alipay'}
                     {l s='In the meanwhile, use the sandbox login below to see how Alipay would look like in your front office.' mod='alipay'}
                 </p>
                 <p><strong>{l s='2. You already have an Alipay Business Account:' mod='alipay'}</strong></p>
-                <p><a href="https://globalprod.alipay.com/login/global.htm" target="_blank">{l s='Sign in' mod='alipay'}</a> {l s='and follow the instructions.' mod='alipay'}</p>
+                <p><a href="https://globalprod.alipay.com/login/global.htm?from=prestashop" target="_blank">{l s='Sign in' mod='alipay'}</a> {l s='and follow the instructions.' mod='alipay'}</p>
             </div>
         </div>
 	</div>
