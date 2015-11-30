@@ -75,7 +75,7 @@
                 <p><strong>{l s='1. You do not have an Alipay Business Account:' mod='alipay'}</strong></p>
                 <p class="justify padding-left">
                     {l s='Visit' mod='alipay'}<br />
-                    <a class="alipay-website" href="http://global.alipay.com/product/websitepayment.html?from=prestashop" target="_blank">http://global.alipay.com/product/websitepayment.html?from=prestashop</a><br />
+                    <a class="alipay-website" href="http://global.alipay.com/product/websitepayment.html?from=prestashop" target="_blank">http://global.alipay.com/product/websitepayment.html</a><br />
                     {l s='to apply for an Alipay Business Account.' mod='alipay'}<br />
                     {l s='We will email you the login details in 2 days.' mod='alipay'}
                     {l s='In the meanwhile, use the sandbox login below to see how Alipay would look like in your front office.' mod='alipay'}
