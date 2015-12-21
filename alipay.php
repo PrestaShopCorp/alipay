@@ -37,7 +37,7 @@ class Alipay extends PaymentModule
     {
         $this->name = 'alipay';
         $this->tab = 'payments_gateways';
-        $this->version = '1.0.2';
+        $this->version = '1.0.3';
         $this->author = 'Alipay';
         $this->need_instance = 0;
 
