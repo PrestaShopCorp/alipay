@@ -37,7 +37,7 @@ class Alipay extends PaymentModule
     {
         $this->name = 'alipay';
         $this->tab = 'payments_gateways';
-        $this->version = '1.0.3';
+        $this->version = '1.0.4';
         $this->author = 'Alipay';
         $this->need_instance = 0;
 
@@ -336,7 +336,7 @@ class Alipay extends PaymentModule
         if ($trade_response->processResponse($xml, $transaction_details) < 0) {
             $this->context->controller->errors = array_merge(
                 $this->context->controller->errors,
-                $trade_query->getErrors()
+                $trade_response->getErrors()
             );
         } else {
             $vars = $trade_response->getTplVars();
